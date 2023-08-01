@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Welcome to my little to-do project using React and Next.js
 
+![image](https://github.com/AndyPendragon/my_lil_todo_ploctopus/assets/116746292/6e894b70-358c-4761-9221-67cc043d2cc8)
+
 ## To run the development server:
 You can use the commands :
 
