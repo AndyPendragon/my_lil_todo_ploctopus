@@ -33,29 +33,36 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col w-[22.0625rem]">
-      <h1>Mini To-Do App</h1>
-      <div>
+    <div className="flex flex-col w-[22.0625rem] gap-4 m-auto mt-4">
+      <h1 className="text-2xl font-bold">Mini ToDo App</h1>
+      <div className="inline-flex gap-3 justify-between">
         <input
           type="text"
           value={inputValue}
           onChange={handleInputChange} // Associe la fonction handleInputChange à l'événement onChange du champ de texte
           placeholder="Enter your task" // Affiche un texte de rappel dans le champ de texte
+          className="p-2"
         />
         {/* Associe la fonction addTodo à l'événement onClick du bouton "Add" */}
-        <button onClick={addTodo} className="p-4 border-slate-500">
+        <button
+          onClick={addTodo}
+          className="p-2 border border-slate-500 rounded-lg"
+        >
           Add
         </button>
       </div>
-      <ul>
+      <ul className="gap-1 flex flex-col">
         {todos.map((todo, index) => (
           // Utilise la méthode map pour afficher chaque tâche dans une liste non ordonnée (ul)
-          <li key={index}>
-            {todo} 
+          <li
+            className="inline-flex gap-3 w-full justify-between items-center"
+            key={index}
+          >
+            {todo}
             {/* Affiche le contenu de chaque tâche */}
             <button
               onClick={() => removeTodo(index)}
-              className="p-4 border-slate-500"
+              className="p-2 border border-slate-500 rounded-lg"
             >
               Remove
             </button>
